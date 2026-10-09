@@ -5,9 +5,30 @@
 
 #include "as1.hpp"
 #include <iostream>
+#include <cmath>
+#include <limits>
+#define CATCH_CONFIG_MAIN
+#include <catch2/catch_test_macros.hpp>
 
 int main() { 
-  // Example for as1.0
+
   homework::printHello();
+
+  int x = 1;
+  homework::AddOneRef(x);
+  REQUIRE(x == 2);
+
+  REQUIRE(homework::isOdd(3) == true);
+  REQUIRE(homework::isOdd(4) == false);
+  REQUIRE(homework::isOdd(-3) == true);
+  REQUIRE(homework::isOdd(-4) == false);
+
+  REQUIRE(homework::floatToInt(3.14f) == 3);
+  REQUIRE(homework::floatToInt(-3.14f) == -3);
+
+  REQUIRE(homework::factorial(0) == 1);
+  REQUIRE(homework::factorial(1) == 1);
+  REQUIRE(homework::factorial(5) == 120);
+  REQUIRE(homework::factorial(-1) == -1);
 }
 
