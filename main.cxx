@@ -5,8 +5,10 @@
 #include <iostream>
 #include <cmath>
 #include <limits>
+#include <string>
 #include "as1.hpp"
 #include "as2.hpp"
+#include "as3.hpp"
 int main() { 
 
   homework::printHello();
@@ -44,16 +46,51 @@ int main() {
     }
   else std::cout<<"factorial does not work"<<std::endl;
 
-homework::Foo foo{};
+  homework::Foo foo{};
 
   if (foo.bar() == 42)
-    std::cout << "bar() PASSED\n";
+    std::cout << "bar() PASSED"<<std::endl;
   else
-    std::cout << "bar() FAILED\n";
+    std::cout << "bar() FAILED"<<std::endl;
 
   if (foo.baz() == 3.14f)
-    std::cout << "baz() PASSED\n";
+    std::cout << "baz() PASSED"<<std::endl;
   else
-   std::cout << "baz() FAILED\n";
+   std::cout << "baz() FAILED"<<std::endl;
+
+
+ 
+
+  homework::Color c = homework::Color::red;
+
+  if (c == homework::Color::red) {
+        std::cout << "Color enum worked"<<std::endl;
+    }
+    else {
+        std::cout << "Color enum failed"<<std::endl;
+    }
+
+  homework::Apple apple{homework::Color::green};
+
+  if (apple.getColor() == homework::Color::green) {
+        std::cout << "Apple color worked"<<std::endl;
+    }
+    else {
+        std::cout << "Apple color failed"<<std::endl;
+    }
+
+    if (apple.getName() == "apple") {
+        std::cout << "Apple name worked"<<std::endl;
+    }
+    else {
+        std::cout << "Apple name failed"<<std::endl;
+    }
+
+    if (apple.getTaste() == "sweet") {
+        std::cout << "Apple taste passed"<<std::endl;
+    }
+    else {
+        std::cout << "Apple taste failed"<<std::endl;
+    }
 }
 
