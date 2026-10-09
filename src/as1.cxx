@@ -28,6 +28,8 @@ int floatToInt(float x)
 // Can't check the limits of float with a float type since trying to add -1 or +1
 // out of bounds definitionally, so I have to do this ugly mess. 
 // GPT helped here with the -1 and +1.
+// I just realised this is technically far more than was expected.
+// Should have checked the test files first...
     double temp = static_cast<double>(x);
     if (std::isfinite(x) == false ||
         temp <= static_cast<double>(std::numeric_limits<int>::min()) - 1 ||

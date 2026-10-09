@@ -6,6 +6,7 @@
 #include <cmath>
 #include <limits>
 #include "as1.hpp"
+#include "as2.hpp"
 int main() { 
 
   homework::printHello();
@@ -42,5 +43,17 @@ int main() {
       std::cout<<"factorial works"<<std::endl;
     }
   else std::cout<<"factorial does not work"<<std::endl;
+
+homework::Foo foo{};
+
+  if (foo.bar() == 42)
+    std::cout << "bar() PASSED\n";
+  else
+    std::cout << "bar() FAILED\n";
+
+  if (foo.baz() == 3.14f)
+    std::cout << "baz() PASSED\n";
+  else
+   std::cout << "baz() FAILED\n";
 }
 
