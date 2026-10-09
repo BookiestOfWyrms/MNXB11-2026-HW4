@@ -32,7 +32,7 @@ fVector2D operator+(const fVector2D& other) const
   return {x_ + other.x_, y_ + other.y_};
 }
 
-bool operator=(const fVector2D& other) const
+bool operator==(const fVector2D& other) const
 {
   return x_ == other.x_ && y_ == other.y_;
 }
