@@ -2,14 +2,12 @@
  *  You can add all the exercise tests inside the same main.
  *  Don't forget to add includes properly.
  * */
-
-#include "as1.hpp"
 #include <iostream>
 #include <cmath>
 #include <limits>
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch_test_macros.hpp>
-
+#include "as1.hpp"
 int main() { 
 
   homework::printHello();
