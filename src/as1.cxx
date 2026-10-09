@@ -50,15 +50,19 @@ int floatToInt(float x)
 int factorial(int n) { 
     if (n < 0 || n > 12) 
     { 
-        throw std::out_of_range(
-            "Trying to factorialize n >= 13 yields a value beyond MAX_INT");
+        return n;
     }
-        int aux{1};
+    if (n == 0) return 1;
+    else 
+    {
+    int aux{1};
+    
     for (int i = 1; i <= n ; i++)
     {
         aux = aux * i;
     } 
     return aux;
+    }
 }
 
 

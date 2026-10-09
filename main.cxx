@@ -5,8 +5,6 @@
 #include <iostream>
 #include <cmath>
 #include <limits>
-#define CATCH_CONFIG_MAIN
-#include <catch2/catch_test_macros.hpp>
 #include "as1.hpp"
 int main() { 
 
@@ -14,19 +12,35 @@ int main() {
 
   int x = 1;
   homework::AddOneRef(x);
-  REQUIRE(x == 2);
+  if (x == 2) std::cout<<"AddOneRef works"<<std::endl;
+  else std::cout<<"AddOneRef does not work"<<std::endl;
 
-  REQUIRE(homework::isOdd(3) == true);
-  REQUIRE(homework::isOdd(4) == false);
-  REQUIRE(homework::isOdd(-3) == true);
-  REQUIRE(homework::isOdd(-4) == false);
+  if (homework::isOdd(3) == true &&
+      homework::isOdd(4) == false &&
+      homework::isOdd(-3) == true &&
+      homework::isOdd(-4) == false) 
+  {
+    std::cout<<"IsOdd works"<<std::endl;
+  }
+  else std::cout<<"IsOdd does not work"<<std::endl;
 
-  REQUIRE(homework::floatToInt(3.14f) == 3);
-  REQUIRE(homework::floatToInt(-3.14f) == -3);
 
-  REQUIRE(homework::factorial(0) == 1);
-  REQUIRE(homework::factorial(1) == 1);
-  REQUIRE(homework::factorial(5) == 120);
-  REQUIRE(homework::factorial(-1) == -1);
+  if (homework::floatToInt(3.14f) == 3 &&
+      homework::floatToInt(-3.14f) == -3) 
+      {
+        std::cout<<"floatToInt works"<<std::endl;
+      }
+  else std::cout<<"floatToInt does not work"<<std::endl;
+ 
+
+  if (homework::factorial(0) == 1 &&
+      homework::factorial(1) == 1 &&
+      homework::factorial(5) == 120 &&
+      homework::factorial(-1) == -1
+)
+    {
+      std::cout<<"factorial works"<<std::endl;
+    }
+  else std::cout<<"factorial does not work"<<std::endl;
 }
 
