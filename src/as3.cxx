@@ -2,7 +2,6 @@
 
 namespace homework {
 
-namespace homework {
 
 Fruit::Fruit(std::string name, Color color)
     : _name(name), _color(color) {}
